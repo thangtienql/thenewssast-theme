@@ -80,6 +80,29 @@ function custom_post_type_thenewssast(){
           'rewrite' => array( 'slug' => 'sub_cat','with_front' => false, 'hierarchical' => true ),
         )
     );
+
+    register_taxonomy( 'post_sub',
+        array('post'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+        array(
+          'hierarchical' => true,
+          'labels' => array(
+            'name' => __( 'Subs', 'thenewssast' ), /* name of the custom taxonomy */
+            'singular_name' => __( 'Sub', 'thenewssast' ), /* single taxonomy name */
+            'search_items' =>  __( 'Search Sub', 'thenewssast' ), /* search title for taxomony */
+            'all_items' => __( 'All Sub', 'thenewssast' ), /* all title for taxonomies */
+            'parent_item' => __( 'Parent Sub', 'thenewssast' ), /* parent title for taxonomy */
+            'parent_item_colon' => __( 'Parent Sub:', 'thenewssast' ), /* parent taxonomy title */
+            'edit_item' => __( 'Edit Sub', 'thenewssast' ), /* edit custom taxonomy title */
+            'update_item' => __( 'Update Sub', 'thenewssast' ), /* update title for taxonomy */
+            'add_new_item' => __( 'Add New Sub', 'thenewssast' ), /* add new title for taxonomy */
+            'new_item_name' => __( 'New Sub Name', 'thenewssast' ) /* name title for taxonomy */
+          ),
+          'show_admin_column' => true,
+          'show_ui' => true,
+          'query_var' => true,
+          'rewrite' => array( 'slug' => 'sub_cat_post','with_front' => false, 'hierarchical' => true ),
+        )
+    );
   
   }
   add_action( 'init', 'custom_post_type_thenewssast');
