@@ -12,3 +12,4 @@ define( 'PJ_DEV_MODE', true ); // enable to compiler scssphp
 * Includes
 */
 require( PJ_DIR_URL . '/post-type.php' );
+require( PJ_DIR_URL . '/hook.php' );
