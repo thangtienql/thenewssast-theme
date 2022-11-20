@@ -15,7 +15,7 @@ add_action( 'admin_enqueue_scripts', 'wpse50770_add_admin_scripts', 10, 1 );
 function wpse50770_add_admin_scripts( $hook ) {
     global $post;
     // print_r($hook);
-    print_r($_GET['message']);
+    // print_r($_GET['message']);
 
     //Only need to enque script on the post.php page
     //Optional: restirct by post type
