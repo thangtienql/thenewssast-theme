@@ -23,10 +23,8 @@ function wpse50770_add_admin_scripts( $hook ) {
         $permalink = get_the_permalink($post->ID);
         
         $url = 'https://www.test.com?slug='. $permalink;
-        echo $url;
         echo "
         <script type='text/javascript'>
-            console.log('ok');
             window.open('$url', '_blank');
         </script>
         ";
